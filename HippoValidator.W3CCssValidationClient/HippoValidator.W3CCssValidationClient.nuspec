@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>$version$</version>
+    <authors>HippoValidator</authors>
+    <owners />
+    <dependencies />
+    <id>HippoValidator.W3CCssValidationClient</id>
+    <title>HippoValidator.W3CCssValidationClient</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A c# client for the W3C CSS validator.</description>
+  </metadata>
+  <files>
+    <file src="bin\$Configuration$\HippoValidator.W3CCssValidationClient.dll" target="lib\net40\HippoValidator.W3CCssValidationClient.dll" />
+    <file src="bin\$Configuration$\HippoValidator.W3CCssValidationClient.pdb" target="lib\net40\HippoValidator.W3CCssValidationClient.pdb" />
+  </files>
+</package>
