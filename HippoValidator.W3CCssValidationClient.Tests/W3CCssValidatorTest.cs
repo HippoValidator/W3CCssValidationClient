@@ -19,6 +19,8 @@ namespace HippoValidator.W3CCssValidationClient.Tests
             // Assert
             Assert.That(result.Errors.Any());
             Assert.That(result.Warnings.Any());
+            Assert.That(result.Errors.First().MessageId, Is.Not.Null);
+            Assert.That(result.Warnings.First().MessageId, Is.Not.Null);
         }
     }
 }

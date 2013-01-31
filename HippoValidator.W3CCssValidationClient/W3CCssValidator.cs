@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Xml.Linq;
 
 namespace HippoValidator.W3CCSSValidationClient
@@ -50,10 +52,11 @@ namespace HippoValidator.W3CCSSValidationClient
                         if (errorElement.Descendants(_namespace + "col").Any())
                             issue.Column = int.Parse(errorElement.Descendants(_namespace + "col").First().Value);
                         if (errorElement.Descendants(_namespace + "message").Any())
+                        {
                             issue.Title = errorElement.Descendants(_namespace + "message").First().Value;
-                        if (errorElement.Descendants(_namespace + "messageid").Any())
-                            issue.MessageId = errorElement.Descendants(_namespace + "messageid").First().Value;
-
+                            issue.MessageId = Encoding.UTF8.GetString(MD5.Create().ComputeHash(Encoding.UTF8.GetBytes(issue.Title)));
+                        }
+ 
                         issues.Add(issue);
                     }
                 }
