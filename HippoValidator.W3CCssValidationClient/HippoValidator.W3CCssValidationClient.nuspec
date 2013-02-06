@@ -9,6 +9,7 @@
     <title>HippoValidator.W3CCssValidationClient</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A c# client for the W3C CSS validator.</description>
+    <projectUrl>https://github.com/HippoValidator/W3CCssValidationClient</projectUrl>
   </metadata>
   <files>
     <file src="bin\$Configuration$\HippoValidator.W3CCssValidationClient.dll" target="lib\net40\HippoValidator.W3CCssValidationClient.dll" />
